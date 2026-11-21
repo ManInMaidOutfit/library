@@ -63,4 +63,9 @@ public class BookController
         bookservice.delete(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/ping")
+    public ResponseEntity<String> ping() {
+        return ResponseEntity.ok("BookController работает!");
+    }
 }
